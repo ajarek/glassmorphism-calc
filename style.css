@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161623;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(255, 17, 0), #f0f);
+    clip-path: circle(20% at 70% 90%);
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 30% 10%);
+
+}
+
+.container {
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    backdrop-filter: blur(3px);
+
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 475px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.calc {
+    position: relative;
+    display: grid;
+}
+
+.calc input {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+}
+
+input[type=button] {
+    display: grid;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    user-select: none;
+    transition: 0.5s;
+}
+
+input[type=button]:hover {
+    background:rgba(255, 255, 255, 0.5);
+    transition: 0;
+}
+
+input[type=button]:active {
+    background: #14ff47;
+    color: #192f00;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+input[type=reset] {
+    grid-column: span 4;
+    height: 75px;
+}
+
+input[type=reset]:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0;
+}
+
+input[type="textfield"],
+textarea {
+    grid-column: span 4;
+    height: 100px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+}
+.logo{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
